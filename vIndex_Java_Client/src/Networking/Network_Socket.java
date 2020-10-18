@@ -3,19 +3,20 @@ package src.Networking;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.ServerSocket; // needs to be changed to client socket
+import java.net.Socket;
 
 public class Network_Socket {
 
     private int nPort; // networking port
     private String nAdress; // networkig adress
 
-    public Network_Socket(int port_number){
+    public Network_Socket(String network_adress, int port_number){
+        this.nAdress = network_adress;
         this.nPort = port_number;
 
-        try (ServerSocket serverSocket = new ServerSocket(nPort)) {
-            java.net.Socket socket = serverSocket.accept();
-            System.out.println("Client connected"); 
+        try (Socket socket = new Socket(nAdress, nPort)) {
+
+            System.out.println("Connected to server"); 
             BufferedReader input =  new BufferedReader( new InputStreamReader(socket.getInputStream()));  
             PrintWriter output = new PrintWriter(socket.getOutputStream(), true);  
             
@@ -27,7 +28,7 @@ public class Network_Socket {
                 output.println("Echo from server" + echoString);
             }
         } catch (Exception e) {
-            System.out.println("server exception " + e.getMessage());
+            System.out.println("Client error: " + e.getMessage());
             e.printStackTrace();
         }
     }   
