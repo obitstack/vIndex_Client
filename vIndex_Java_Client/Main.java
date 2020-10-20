@@ -1,10 +1,10 @@
-import src.Networking.Network_Socket;
+import src.Networking.TCP_IP_Network_Socket;
 public class Main {
     public static void main(String[] args){
 
         //new Frame_00();
 
-        Network_Socket nSocket = new Network_Socket("localhost", 50000);
+        TCP_IP_Network_Socket nSocket = new TCP_IP_Network_Socket("localhost", 50000);
         
 
     }
