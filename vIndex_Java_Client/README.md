@@ -1,14 +1,19 @@
-## Getting Started
+# vIndex_Client
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+- Client implementation of the wine inventory app.
+- status: On hold
 
-## Folder Structure
+## info
+vIndex is an inventory manager where you can create a hosted database to keep track of wines that one has in storage. Written in Java.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+## Goals
+- client runs on win/lin/mac/android
+- connect to Encryped database via WSS
+## Features
+- username password login
+- create, remove, edit & merge -cellars (db-Tables)
+- add, remove & edit cellar entry's
+- add, remove & edit date triggered notifiers for selected entry
+- get actual Wine facts/news based on inventory
+- option to share cellar with friend + set permissions
+- option to add cellar from friends 
