@@ -1,4 +1,4 @@
-package src.Networking;
+package Networking;
 
 public class UDP_ClientSocket {
     

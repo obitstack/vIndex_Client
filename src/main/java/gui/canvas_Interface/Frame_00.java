@@ -1,4 +1,4 @@
-package src.gui.canvas_Interface;
+package gui.canvas_Interface;
 
 import javax.swing.*;
 import java.awt.*;
